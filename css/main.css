@@ -69,6 +69,7 @@ a {
     box-shadow:
         0 1px 3px rgba(0, 0, 0, 0.12),
         0 1px 2px rgba(0, 0, 0, 0.24);
+    cursor: pointer;
     padding: 12px;
     transition: all 250ms;
 }
@@ -91,9 +92,32 @@ a {
     text-align: left;
 }
 
-.card .cost {
+.cost {
+    flex-shrink: 0;
     font-weight: 600;
     opacity: 0.8;
+}
+
+.ingredient {
+    align-items: baseline;
+    display: flex;
+    margin: 24px 0;
+}
+
+.ingredient > * {
+    margin: 0 6px;
+}
+
+.ingredient > *:first-child {
+    margin-left: 0;
+}
+
+.ingredient > *:last-child {
+    margin-right: 0;
+}
+
+.ingredient input[type="text"] {
+    flex: 1 1 100%;
 }
 
 /**********

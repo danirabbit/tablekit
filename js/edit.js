@@ -9,4 +9,7 @@ $(function () {
         localStorage.setItem("recipe_name", recipe_entry.val());
     });
 
+    $.get("partials/ingredient.html", function(data){
+        $(".ingredient-list").html(data);
+    });
 });
