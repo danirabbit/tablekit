@@ -76,8 +76,4 @@ main {
         vertical-align: top;
         width: calc(66% - 48px);
     }
-
-    .grid *:only-child p {
-        text-align: center;
-    }
 }
