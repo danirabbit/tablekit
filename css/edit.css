@@ -1,0 +1,49 @@
+/*
+* Copyright (c) 2016 Daniel Foré (http://danielfore.com)
+*
+* This program is free software; you can redistribute it and/or
+* modify it under the terms of the GNU General Public
+* License as published by the Free Software Foundation; either
+* version 3 of the License, or (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+* General Public License for more details.
+*
+* You should have received a copy of the GNU General Public
+* License along with this program; if not, write to the
+* Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+* Boston, MA 02111-1307, USA.
+*/
+
+.ingredient {
+    align-items: baseline;
+    display: flex;
+    margin: 24px 0;
+}
+
+.ingredient > * {
+    margin: 0 6px;
+}
+
+.ingredient > *:first-child {
+    margin-left: 0;
+}
+
+.ingredient > *:last-child {
+    margin-right: 0;
+}
+
+i.fa.fa-trash {
+    margin-left: 18px;
+    opacity: 0.4;
+}
+
+i.fa.fa-trash:hover {
+    opacity: 1;
+}
+
+.ingredient input[type="text"] {
+    flex: 1 1 100%;
+}

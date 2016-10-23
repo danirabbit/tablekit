@@ -98,28 +98,6 @@ a {
     opacity: 0.8;
 }
 
-.ingredient {
-    align-items: baseline;
-    display: flex;
-    margin: 24px 0;
-}
-
-.ingredient > * {
-    margin: 0 6px;
-}
-
-.ingredient > *:first-child {
-    margin-left: 0;
-}
-
-.ingredient > *:last-child {
-    margin-right: 0;
-}
-
-.ingredient input[type="text"] {
-    flex: 1 1 100%;
-}
-
 /**********
  * Footer *
  *********/
