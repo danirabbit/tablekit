@@ -1,0 +1,83 @@
+/*
+* Copyright (c) 2016 Daniel Foré (http://danielfore.com)
+*
+* This program is free software; you can redistribute it and/or
+* modify it under the terms of the GNU General Public
+* License as published by the Free Software Foundation; either
+* version 3 of the License, or (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+* General Public License for more details.
+*
+* You should have received a copy of the GNU General Public
+* License along with this program; if not, write to the
+* Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+* Boston, MA 02111-1307, USA.
+*/
+
+body,
+html {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.grid {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 32px 0;
+    text-align: center;
+    width: auto;
+}
+
+.grid > * {
+    margin: 16px;
+}
+
+.grid .grid {
+    padding: 0;
+}
+
+.grid .whole {
+    display: block;
+}
+
+@media only screen and (min-width: 640px) {
+    .grid .half {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(50% - 48px);
+    }
+
+    .grid .half h2 {
+        text-align: left;
+    }
+
+    .grid .third {
+        width: calc(33.33% - 32px);
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 16px;
+    }
+
+    .grid .third:last-child {
+        margin-left: 16px;
+        margin-right: 0;
+    }
+
+    .grid .two-thirds {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(66% - 48px);
+    }
+
+    .grid *:only-child p {
+        text-align: center;
+    }
+}
