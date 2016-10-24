@@ -74,6 +74,10 @@ a {
     transition: all 250ms;
 }
 
+.card + .card {
+    margin-top: 12px;
+}
+
 .card:hover {
     box-shadow:
         0 3px 6px rgba(0, 0, 0, 0.16),

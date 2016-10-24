@@ -1,17 +1,30 @@
 $(function () {
-    $.get("partials/card.html", function(data){
-        $(".recipe-list").html(data);
+    var data = localStorage.getItem("text");
 
-        var recipe_title = $(".title");
+    if (data = "undefined") {
+        var data = '{ "recipes" : [' +
+            '{ "name" : "Test Recipe One", "cost" : "1.23" },' +
+            '{ "name" : "Test Recipe Two", "cost" : "1.24" } ]}';
+        localStorage.setItem("text", data);
+    }
 
-        $(".cost span").text("4.86");
+    var obj = JSON.parse(data);
 
-        if (localStorage.getItem("recipe_name") != "undefined") {
-            recipe_title.text(localStorage.getItem("recipe_name"));
-        }
+    for (var i = 0, len = obj.recipes.length; i < len; i++) {
+        $.get("partials/card.html", function(data){
+            $(".recipe-list").append(data);
 
-        $(".card").click(function() {
-            window.location.href = "edit";
+            var i = 0
+            $(".card").each(function(){
+                $(".title", this).text(obj.recipes[i].name)
+                $(".cost span", this).text(obj.recipes[i].cost);
+                $(this).attr("id", i);
+                i++;
+            });
+
+            $(".card").click(function() {
+                window.location.href = "edit?id=" + $(this).attr("id");
+            });
         });
-    });
+    }
 });
